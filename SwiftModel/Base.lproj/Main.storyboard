@@ -710,11 +710,11 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="h6B-GY-xCd">
-                                <rect key="frame" x="189" y="183" width="103" height="51"/>
+                                <rect key="frame" x="197" y="183" width="86" height="51"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="gPJ-gZ-v9N"/>
                                 </constraints>
-                                <buttonCell key="cell" type="push" title="C#-&gt;Swift" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="XQu-kr-zIh">
+                                <buttonCell key="cell" type="push" title="C#-&gt;类" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="XQu-kr-zIh">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -752,7 +752,7 @@
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <size key="minSize" width="543" height="388"/>
-                                            <size key="maxSize" width="543" height="10000000"/>
+                                            <size key="maxSize" width="560" height="10000000"/>
                                             <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </textView>
                                     </subviews>
@@ -768,16 +768,16 @@
                                 </scroller>
                             </scrollView>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FCl-jK-Chv">
-                                <rect key="frame" x="20" y="20" width="485" height="30"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="输入生成对象父Model(必须继承Codable协议)" drawsBackground="YES" id="csb-hM-pQa">
+                                <rect key="frame" x="20" y="20" width="384" height="30"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="输入生成对象父Model(Swift必须继承Codable协议)" drawsBackground="YES" id="csb-hM-pQa">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wTv-tE-xu8">
-                                <rect key="frame" x="519" y="13" width="67" height="41"/>
-                                <buttonCell key="cell" type="push" title="生成" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0ld-YD-QbN">
+                                <rect key="frame" x="488" y="13" width="98" height="41"/>
+                                <buttonCell key="cell" type="push" title="生成Swift" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0ld-YD-QbN">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -785,12 +785,24 @@
                                     <action selector="okBtn:" target="O8L-aF-gWF" id="QFT-uN-J7B"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="21K-9I-Leg">
+                                <rect key="frame" x="406" y="13" width="86" height="41"/>
+                                <buttonCell key="cell" type="push" title="生成OC" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cPq-5Y-wo4">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="okOCAction:" target="O8L-aF-gWF" id="3Mm-eJ-7fg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="0tb-GJ-WCW" firstAttribute="leading" secondItem="zuP-kJ-2qs" secondAttribute="leading" constant="20" id="3t6-Pq-NlF"/>
                             <constraint firstItem="0tb-GJ-WCW" firstAttribute="top" secondItem="zuP-kJ-2qs" secondAttribute="top" constant="20" id="BaH-6F-eL6"/>
                             <constraint firstAttribute="bottom" secondItem="0tb-GJ-WCW" secondAttribute="bottom" constant="70" id="M4O-k0-6cS"/>
-                            <constraint firstItem="wTv-tE-xu8" firstAttribute="leading" secondItem="FCl-jK-Chv" secondAttribute="trailing" constant="20" id="UZw-e7-Wv3"/>
+                            <constraint firstItem="21K-9I-Leg" firstAttribute="leading" secondItem="FCl-jK-Chv" secondAttribute="trailing" constant="8" id="MzS-4E-rSj"/>
+                            <constraint firstItem="wTv-tE-xu8" firstAttribute="top" secondItem="21K-9I-Leg" secondAttribute="top" id="PxA-Xd-MeT"/>
+                            <constraint firstItem="wTv-tE-xu8" firstAttribute="leading" secondItem="21K-9I-Leg" secondAttribute="trailing" constant="8" id="U3O-BV-obN"/>
                             <constraint firstAttribute="bottom" secondItem="wTv-tE-xu8" secondAttribute="bottom" constant="20" id="ZZG-5B-K6a"/>
                             <constraint firstItem="FCl-jK-Chv" firstAttribute="leading" secondItem="zuP-kJ-2qs" secondAttribute="leading" constant="20" id="blc-Tj-OD5"/>
                             <constraint firstItem="wTv-tE-xu8" firstAttribute="top" secondItem="0tb-GJ-WCW" secondAttribute="bottom" constant="20" id="dac-8j-V7h"/>
@@ -798,6 +810,7 @@
                             <constraint firstAttribute="trailing" secondItem="0tb-GJ-WCW" secondAttribute="trailing" constant="20" id="gt6-qf-MDs"/>
                             <constraint firstAttribute="bottom" secondItem="FCl-jK-Chv" secondAttribute="bottom" constant="20" id="hZn-tz-sGA"/>
                             <constraint firstAttribute="trailing" secondItem="wTv-tE-xu8" secondAttribute="trailing" constant="20" id="lTS-N3-jlj"/>
+                            <constraint firstItem="wTv-tE-xu8" firstAttribute="bottom" secondItem="21K-9I-Leg" secondAttribute="bottom" id="rPa-jr-VqS"/>
                         </constraints>
                     </view>
                     <connections>
